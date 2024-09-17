@@ -20,6 +20,14 @@ namespace AuthorWithLogin.Controllers
                 return View(authorDetail);
             }
         }
+        public ActionResult GetAllAuthors()
+        {
+            using(var session = NHibernateHelper.CreateSession())
+            {
+                var authors=session.Query<Author>().ToList();
+                return View(authors);
+            }
+        }
         [HttpGet]
         public ActionResult Create()
         {

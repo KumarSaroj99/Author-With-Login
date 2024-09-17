@@ -20,6 +20,7 @@
                 </button>
                 @Html.ActionLink($"The Author Hub ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <span style=" background-color:red">@Html.ActionLink($"Logout ", "Logout", "Home", new { area = "" }, new { @class = "navbar-brand" })</span>
+            <div style="margin-left:20px">@Html.ActionLink("Authors", "GetAllAuthors", "AuthorDetail")</div>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
